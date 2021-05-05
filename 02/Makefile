@@ -6,8 +6,11 @@ MAKEFLAGS += --no-builtin-rules
 .DEFAULT_GOAL := help
 .PHONY: $(shell egrep -oh ^[a-zA-Z0-9][a-zA-Z0-9_-]+: $(MAKEFILE_LIST) | sed 's/://')
 
-small_step: # small_step
+small_step: ## small_step
 	ruby ./small_step.rb
+
+big_step: ## big_step
+	ruby ./big_step.rb
 
 # https://postd.cc/auto-documented-makefile/
 help: ## ヘルプを表示
